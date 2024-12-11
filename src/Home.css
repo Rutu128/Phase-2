@@ -1,0 +1,145 @@
+:root {
+  --header-background: #fff;
+  --button-background: #fff; 
+  --secondary-button-background: #cad5d5; 
+  --button-hover-usenavbar: #A0A2A5;
+}
+.shepherd-enabled.shepherd-element {
+  opacity: 1;
+  padding:0;
+  visibility: visible;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header {
+  background: var(--header-background); /* Make header background transparent */
+  font-family: GT Pressura, sans-serif;
+  padding-bottom: 0;
+  padding-left: 2rem;
+  padding: 1em;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header .shepherd-title {
+  background: transparent; /* Title background transparent */
+  text-transform: uppercase;
+}
+
+.shepherd-title {
+  color: #000000bf;
+  padding-left: 1em;
+  font-weight: 600;
+}
+
+.shepherd-element {
+  border-radius: 0;
+  border: solid 4px #16202d;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px #0003;
+  margin: 0;
+  max-width: 400px;
+  opacity: 0;
+  outline: none;
+  transition: opacity .3s, visibility .3s;
+  visibility: hidden;
+  width: 100%;
+}
+
+.shepherd-header {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 2em;
+}
+
+.shepherd-text {
+  padding: 2rem;
+  color: #000000bf;
+  font-size: large;
+  line-height: 1.3em;
+}
+
+.shepherd-footer {
+  margin-right: 0;
+}
+
+.shepherd-element[data-popper-placement^=bottom] .shepherd-arrow {
+  top: -35px; /* Place arrow below the highlighted area */
+}
+.shepherd-element[data-popper-placement^=bottom] .shepherd-arrow:after {
+  transform: rotate(90deg);
+}
+
+.shepherd-element .shepherd-arrow {
+  border-width: 0;
+}
+
+
+.shepherd-arrow:before {
+  background: #fff;
+  content: unset;
+  transform: rotate(45deg);
+}
+
+.shepherd-element .shepherd-arrow:after {
+  content: url(https://www.shepherdjs.dev/img/arrow.svg);
+  display: inline-block;
+}
+
+/* Move the tooltip (Shepherd box) below the arrow */
+.shepherd-element[data-popper-placement^=bottom] {
+  margin-top: 40px; /* Adjust margin to create space for the arrow */
+}
+
+.shepherd-button {
+  background: var(--button-background);
+  border-top: solid 4px #16202d;
+  border-radius: 0;
+  color: #16202d;
+  display: flex;
+  flex-grow: 1;
+  font-family: GT Pressura, sans-serif;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.shepherd-button:hover {
+  background-color: var(--button-hover-usenavbar) !important; /* Keep the background color unchanged */
+  color: inherit !important;           /* Keep the text color unchanged */
+  cursor: default;                     /* Optional: Change cursor to default */
+  box-shadow: none !important;         /* Remove any hover-specific shadow */
+}
+
+
+.shepherd-footer button:not(:last-of-type) {
+  border-right: solid 4px #16202d;
+}
+
+.shepherd-footer {
+  padding: 0;
+}
+
+.shepherd-button.shepherd-button-secondary {
+  background: var(--secondary-button-background); ;
+  color: #000000bf;
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(var(--blur-start, 16px));
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.shepherd-text-blur {
+  animation: blurIn var(--animation-speed, 1s) ease-in-out;
+}

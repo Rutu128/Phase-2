@@ -1,0 +1,46 @@
+{
+  "1": {
+    "greet": "Welcome! We’re excited to have you here. Let’s explore the site together.",
+    "navbar": "This is the navigation bar, your gateway to different sections of the site.",
+    "home-nav": "Click here anytime to return to the home page and start fresh.",
+    "service-nav": "Discover the range of services we offer by clicking here.",
+    "about-nav": "Learn more about who we are and what we do by clicking here.",
+    "contact-nav": "Reach out to us through the contact page by clicking here.",
+    "recordings-nav": "Access previous interaction recordings through this link.",
+    "speed": 0.5,
+    "blur": 8
+  },
+  "2": {
+    "greet": "Hello and welcome! Take a tour to get to know our site better.",
+    "navbar": "Here’s the navigation bar where you can quickly access all areas of the site.",
+    "home-nav": "This is your home page link. Use it to quickly return to the starting page.",
+    "service-nav": "Click here to view and explore our diverse services.",
+    "about-nav": "Find out more about our story and values by visiting the About Us page.",
+    "contact-nav": "Have questions? Contact us through this page.",
+    "recordings-nav": "View past interaction recordings by clicking here.",
+    "speed": 1,
+    "blur": 16
+  },
+  "3": {
+    "greet": "Greetings! Let us guide you through a quick tour of our website.",
+    "navbar": "The navigation bar helps you find your way across the website.",
+    "home-nav": "Need to return home? Click this to navigate back to the homepage instantly.",
+    "service-nav": "Want to see what we offer? Head over to our services page.",
+    "about-nav": "Want to know more about us? Click here for details.",
+    "contact-nav": "Connect with us via the Contact Us section for any inquiries.",
+    "recordings-nav": "This link lets you browse recordings of prior interactions.",
+    "speed": 1.5,
+    "blur": 8
+  },
+  "4": {
+    "greet": "Hi there! Discover the key features of our website with this tour.",
+    "navbar": "Use the navigation bar to reach different sections quickly and easily.",
+    "home-nav": "Tap here to come back to the main page at any point.",
+    "service-nav": "Explore our comprehensive service offerings by clicking this section.",
+    "about-nav": "Get to know us better by exploring the About Us section.",
+    "contact-nav": "Feel free to reach out by visiting our contact page.",
+    "recordings-nav": "Find recordings of past sessions by navigating to this section.",
+    "speed": 2,
+    "blur": 16
+  }
+}

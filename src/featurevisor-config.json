@@ -1,0 +1,13 @@
+{
+    "environments": {
+      "custom": {
+        "variables": {
+          "backend_status": {
+            "type": "string",
+            "defaultValue": "backend_inactive"
+          }
+        }
+      }
+    }
+  }
+  

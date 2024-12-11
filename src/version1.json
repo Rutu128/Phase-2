@@ -1,0 +1,230 @@
+{
+  "versions": [
+    {
+      "version": "1",
+      "fontStyle": "Arial, sans-serif",
+      "backgroundColor": "#f8f9fa",
+      "buttonColor": "#007bff",
+      "buttonFontStyle": "Algerian,serif",
+      "navbarColor": "#343a40",
+      "shepherdheader": "#f8f9fa",
+      "shepherdbutton": "#343a40",
+      "shepherdbuttonsecondary": "#f8f9fa"
+    },
+    {
+      "version": "2",
+      "fontStyle": "Georgia, serif",
+      "backgroundColor": "#ffffff",
+      "buttonColor": "#dc3545",
+      "buttonFontStyle": "Helvetica, sans-serif",
+      "navbarColor": "#6c757d",
+      "shepherdheader": "#ffffff",
+      "shepherdbutton": "#6c757d",
+      "shepherdbuttonsecondary": "#ffffff"
+    },
+    {
+      "version": "3",
+      "fontStyle": "Tahoma, sans-serif",
+      "backgroundColor": "#f4f4f4",
+      "buttonColor": "#28a745",
+      "buttonFontStyle": "Courier New, monospace",
+      "navbarColor": "#00796b",
+      "shepherdheader": "#f4f4f4",
+      "shepherdbutton": "#00796b",
+      "shepherdbuttonsecondary": "#f4f4f4"
+    },
+    {
+      "version": "4",
+      "fontStyle": "Comic Sans MS, sans-serif",
+      "backgroundColor": "#f3e5f5",
+      "buttonColor": "#9c27b0",
+      "buttonFontStyle": "Impact, sans-serif",
+      "navbarColor": "#6a1b9a",
+      "shepherdheader": "#f3e5f5",
+      "shepherdbutton": "#6a1b9a",
+      "shepherdbuttonsecondary": "#f3e5f5"
+    },
+    {
+      "version": "5",
+      "fontStyle": "Times New Roman, serif",
+      "backgroundColor": "#fce4ec",
+      "buttonColor": "#e91e63",
+      "buttonFontStyle": "Arial, sans-serif",
+      "navbarColor": "#d81b60",
+      "shepherdheader": "#fce4ec",
+      "shepherdbutton": "#d81b60",
+      "shepherdbuttonsecondary": "#fce4ec"
+    },
+    {
+      "version": "6",
+      "fontStyle": "Verdana, sans-serif",
+      "backgroundColor": "#fff9c4",
+      "buttonColor": "#fbc02d",
+      "buttonFontStyle": "Courier New, monospace",
+      "navbarColor": "#f57f17",
+      "shepherdheader": "#fff9c4",
+      "shepherdbutton": "#f57f17",
+      "shepherdbuttonsecondary": "#fff9c4"
+    },
+    {
+      "version": 7,
+      "backgroundColor": "rgb(255, 242, 255)",
+      "buttonColor": "rgb(187, 187, 212)",
+      "navbarColor": "rgb(187, 212, 212)",
+      "shepherdHeaderColor": "rgb(187, 212, 212)",
+      "shepherdButtonColor": "rgb(187, 187, 212)",
+      "shepherdButtonSecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 8,
+      "backgroundColor": "rgb(242, 255, 255)",
+      "buttonColor": "rgb(200, 200, 174)",
+      "navbarColor": "rgb(174, 225, 174)",
+      "shepherdHeaderColor": "rgb(174, 225, 174)",
+      "shepherdButtonColor": "rgb(200, 200, 174)",
+      "shepherdButtonSecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 9,
+      "backgroundColor": "rgb(255, 242, 255)",
+      "buttonColor": "rgb(187, 212, 187)",
+      "navbarColor": "rgb(212, 187, 212)",
+      "shepherdHeaderColor": "rgb(212, 187, 212)",
+      "shepherdButtonColor": "rgb(187, 212, 187)",
+      "shepherdButtonSecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 10,
+      "backgroundColor": "rgb(255, 242, 255)",
+      "buttonColor": "rgb(212, 187, 187)",
+      "navbarColor": "rgb(212, 212, 212)",
+      "shepherdHeaderColor": "rgb(212, 212, 212)",
+      "shepherdButtonColor": "rgb(212, 187, 187)",
+      "shepherdButtonSecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 11,
+      "backgroundColor": "rgb(242, 242, 255)",
+      "buttonColor": "rgb(187, 212, 212)",
+      "navbarColor": "rgb(212, 212, 187)",
+      "shepherdheader": "rgb(212, 212, 187)",
+      "shepherdbutton": "rgb(187, 212, 212)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 12,
+      "backgroundColor": "rgb(229, 255, 255)",
+      "buttonColor": "rgb(200, 174, 200)",
+      "navbarColor": "rgb(200, 200, 200)",
+      "shepherdheader": "rgb(200, 200, 200)",
+      "shepherdbutton": "rgb(200, 174, 200)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 13,
+      "backgroundColor": "rgb(242, 242, 255)",
+      "buttonColor": "rgb(187, 187, 212)",
+      "navbarColor": "rgb(187, 212, 187)",
+      "shepherdheader": "rgb(187, 212, 187)",
+      "shepherdbutton": "rgb(187, 187, 212)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 14,
+      "backgroundColor": "rgb(242, 242, 242)",
+      "buttonColor": "rgb(212, 187, 187)",
+      "navbarColor": "rgb(212, 212, 212)",
+      "shepherdheader": "rgb(212, 212, 212)",
+      "shepherdbutton": "rgb(212, 187, 187)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 15,
+      "backgroundColor": "rgb(242, 255, 242)",
+      "buttonColor": "rgb(212, 187, 187)",
+      "navbarColor": "rgb(212, 187, 187)",
+      "shepherdheader": "rgb(212, 187, 187)",
+      "shepherdbutton": "rgb(212, 187, 187)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 16,
+      "backgroundColor": "rgb(255, 242, 255)",
+      "buttonColor": "rgb(212, 212, 187)",
+      "navbarColor": "rgb(212, 212, 187)",
+      "shepherdheader": "rgb(212, 212, 187)",
+      "shepherdbutton": "rgb(212, 212, 187)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 17,
+      "backgroundColor": "rgb(242, 255, 242)",
+      "buttonColor": "rgb(187, 212, 212)",
+      "navbarColor": "rgb(187, 187, 187)",
+      "shepherdheader": "rgb(187, 187, 187)",
+      "shepherdbutton": "rgb(187, 212, 212)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 18,
+      "backgroundColor": "rgb(229, 229, 255)",
+      "buttonColor": "rgb(193, 200, 225)",
+      "navbarColor": "rgb(174, 200, 200)",
+      "shepherdheader": "rgb(174, 200, 200)",
+      "shepherdbutton": "rgb(193, 200, 225)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 19,
+      "backgroundColor": "rgb(229, 229, 255)",
+      "buttonColor": "rgb(193, 200, 225)",
+      "navbarColor": "rgb(174, 200, 200)",
+      "shepherdheader": "rgb(174, 200, 200)",
+      "shepherdbutton": "rgb(193, 200, 225)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 20,
+      "backgroundColor": "rgb(242, 242, 242)",
+      "buttonColor": "rgb(212, 212, 187)",
+      "navbarColor": "rgb(212, 187, 212)",
+      "shepherdheader": "rgb(212, 187, 212)",
+      "shepherdbutton": "rgb(212, 212, 187)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 21,
+      "backgroundColor": "rgb(255, 242, 255)",
+      "buttonColor": "rgb(187, 212, 212)",
+      "navbarColor": "rgb(212, 187, 212)",
+      "shepherdheader": "rgb(212, 187, 212)",
+      "shepherdbutton": "rgb(187, 212, 212)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    },
+    {
+      "version": 22,
+      "backgroundColor": "rgb(242, 242, 255)",
+      "buttonColor": "rgb(225, 200, 225)",
+      "navbarColor": "rgb(174, 225, 225)",
+      "shepherdheader": "rgb(174, 225, 225)",
+      "shepherdbutton": "rgb(225, 200, 225)",
+      "shepherdbuttonsecondary": "#ffc107",
+      "fontStyle": "Arial, sans-serif"
+    }
+  ]
+}
