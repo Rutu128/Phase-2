@@ -22,7 +22,6 @@ const SessionRecorder = () => {
   });
 
   const saveEventsToS3 = async (forceSave = false) => {
-    console.log("object,",id);
     // Prevent multiple simultaneous save operations
     if (isSavingRef.current) return;
     if (eventsRef.current.length === 0) return;
