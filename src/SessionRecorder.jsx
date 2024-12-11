@@ -10,17 +10,19 @@ const SessionRecorder = () => {
   const sessionId = useRef(`${new Date().toISOString()}-${uuidv4()}`);
   const intervalRef = useRef(null);
   const isSavingRef = useRef(false);
+  const id  = import.meta.env.AWS_ACCESS_KEY
 
   // Configure the S3 client (replace with your actual credentials)
   const s3 = new S3Client({
     region: "us-east-2",
     credentials: {
-      accessKeyId:process.env.AWS_ACCESS_KEY ,
-      secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY ,
+      accessKeyId: import.meta.env.VITE_AWS_ACCESS_KEY,
+      secretAccessKey: import.meta.env.VITE_AWS_SECRET_ACCESS_KEY,
     },
   });
 
   const saveEventsToS3 = async (forceSave = false) => {
+    console.log("object,",id);
     // Prevent multiple simultaneous save operations
     if (isSavingRef.current) return;
     if (eventsRef.current.length === 0) return;
