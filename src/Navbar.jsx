@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="col-10 mx-auto">
           <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/" style={{ color: colors.navbar_font_color }}>
+              <NavLink className="navbar-brand" to="/" style={{ color: colors.button_font_color }}>
                 React Website
               </NavLink>
               <button
@@ -34,7 +34,7 @@ const Navbar = () => {
                         className="nav-link"
                         exact={item === "Home"}
                         to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                        style={{ color: colors.navbar_font_color }}
+                        style={{ color: colors.button_font_color }}
                         activeStyle={{ fontWeight: "bold", textDecoration: "underline" }}
                       >
                         {item}

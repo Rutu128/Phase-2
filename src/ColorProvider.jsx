@@ -35,31 +35,62 @@ export const ColorProvider = ({ children }) => {
           .map((char) => char + char)
           .join("");
       const bigint = parseInt(hex, 16);
-      return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
+      return [
+        (bigint >> 16) & 255, 
+        (bigint >> 8) & 255, 
+        bigint & 255
+      ];
     };
-
+  
+    // Normalize input to RGB array
     let rgb;
     if (Array.isArray(bgColor)) {
       rgb = bgColor;
     } else if (typeof bgColor === "string" && bgColor.startsWith("#")) {
       rgb = hexToRgb(bgColor);
-    } else if (typeof bgColor === "string") {
+    } else if (typeof bgColor === "string" && bgColor.startsWith("rgb")) {
+      // Extract numbers from rgb string
       rgb = bgColor.match(/\d+/g)?.map(Number);
     }
-
+  
+    // Validate RGB
     if (!rgb || rgb.length !== 3) return "rgb(0, 0, 0)";
-
-    const [r, g, b] = rgb.map((c) =>
-      c / 255 <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
-    );
+  
+    // Calculate relative luminance (W3C formula)
+    const getRGB = (c) => {
+      c /= 255;
+      return c <= 0.03928
+        ? c / 12.92
+        : Math.pow((c + 0.055) / 1.055, 2.4);
+    };
+  
+    const r = getRGB(rgb[0]);
+    const g = getRGB(rgb[1]);
+    const b = getRGB(rgb[2]);
+  
     const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    return luminance > 0.179 ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)";
+  
+    // Improved contrast logic
+    return luminance > 0.5 
+      ? "rgb(0, 0, 0)"  // Dark text for light backgrounds
+      : "rgb(255, 255, 255)";  // White text for dark backgrounds
   };
 
   const convertToRgbString = (color) => {
     return Array.isArray(color)
       ? `rgb(${color[0]}, ${color[1]}, ${color[2]})`
       : color;
+  };
+  const fontStyles = [
+    "Arial, sans-serif",
+    "Georgia, serif",
+    "Tahoma, sans-serif",
+    "Comic Sans MS, sans-serif",
+    "Times New Roman, serif",
+    "Verdana, sans-serif",
+  ];
+  const getRandomFontStyle = () => {
+    return fontStyles[Math.floor(Math.random() * fontStyles.length)];
   };
 
   const updateColors = async () => {
@@ -69,34 +100,35 @@ export const ColorProvider = ({ children }) => {
         "https://cloudexpresssolutions.com:5000/run-rl"
       );
       const randomVersion = await response.json();
-      console.log("color fetched from rl");
+      console.log("color fetched from rl", randomVersion);
       const newColors = {
         background_color: convertToRgbString(
-          randomVersion.backgroundColor || [255, 255, 255]
+          randomVersion.data.background_color
+
         ),
-        button_color: convertToRgbString(
-          randomVersion.buttonColor || [22, 32, 45]
-        ),
+        button_color: convertToRgbString(randomVersion.data.button_color),
         secondary_button_color: convertToRgbString(
-          randomVersion.secondaryButtonColor || [202, 213, 213]
+          randomVersion.data.secondaryButtonColor || [202, 213, 213]
         ),
-        navbar_color: convertToRgbString(
-          randomVersion.navbarColor || [160, 162, 165]
+        navbar_color: convertToRgbString(randomVersion.data.navbar_color
         ),
         shepherd_button_color: convertToRgbString(
-          randomVersion.shepherdButtonColor || [255, 255, 255]
+          randomVersion.data.shepherd_button_color
+
         ),
         shepherd_header_color: convertToRgbString(
-          randomVersion.shepherdHeaderColor || [255, 255, 255]
+          randomVersion.data.shepherd_header_color
+
         ),
         page_font_color: calculateContrastingColor(
-          randomVersion.backgroundColor || [255, 255, 255]
+          randomVersion.data.background_color
         ),
         button_font_color: calculateContrastingColor(
-          randomVersion.buttonColor || [22, 32, 45]
+          randomVersion.data.button_color
         ),
-        font_style: randomVersion.fontStyle || "Arial, sans-serif",
+        font_style: getRandomFontStyle(),
       };
+      console.log(newColors);
 
       setColors(newColors);
       localStorage.setItem("colors", JSON.stringify(newColors));
