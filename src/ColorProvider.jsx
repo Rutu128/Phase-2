@@ -20,6 +20,7 @@ export const ColorProvider = ({ children }) => {
           navbar_color: "rgb(160, 162, 165)",
           page_font_color: "rgb(0, 0, 0)",
           button_font_color: "rgb(255, 255, 255)",
+          navbar_font_color: "rgb(255, 255, 255)",
           shepherd_button_color: "#fff",
           shepherd_header_color: "#fff",
           font_style: "Arial, sans-serif",
@@ -81,6 +82,7 @@ export const ColorProvider = ({ children }) => {
       ? `rgb(${color[0]}, ${color[1]}, ${color[2]})`
       : color;
   };
+
   const fontStyles = [
     "Arial, sans-serif",
     "Georgia, serif",
@@ -89,6 +91,7 @@ export const ColorProvider = ({ children }) => {
     "Times New Roman, serif",
     "Verdana, sans-serif",
   ];
+
   const getRandomFontStyle = () => {
     return fontStyles[Math.floor(Math.random() * fontStyles.length)];
   };
@@ -104,27 +107,26 @@ export const ColorProvider = ({ children }) => {
       const newColors = {
         background_color: convertToRgbString(
           randomVersion.data.background_color
-
         ),
         button_color: convertToRgbString(randomVersion.data.button_color),
         secondary_button_color: convertToRgbString(
           randomVersion.data.secondaryButtonColor || [202, 213, 213]
         ),
-        navbar_color: convertToRgbString(randomVersion.data.navbar_color
-        ),
+        navbar_color: convertToRgbString(randomVersion.data.navbar_color),
         shepherd_button_color: convertToRgbString(
           randomVersion.data.shepherd_button_color
-
         ),
         shepherd_header_color: convertToRgbString(
           randomVersion.data.shepherd_header_color
-
         ),
         page_font_color: calculateContrastingColor(
           randomVersion.data.background_color
         ),
         button_font_color: calculateContrastingColor(
           randomVersion.data.button_color
+        ),
+        navbar_font_color: calculateContrastingColor(
+          randomVersion.data.navbar_color
         ),
         font_style: getRandomFontStyle(),
       };
@@ -178,6 +180,9 @@ export const ColorProvider = ({ children }) => {
             button_font_color: calculateContrastingColor(
               fallbackColors.buttonColor
             ),
+            navbar_font_color: calculateContrastingColor(
+              fallbackColors.navbarColor
+            ),
             font_style: fallbackColors.fontStyle,
           };
           console.log(newColors);
@@ -212,6 +217,11 @@ export const ColorProvider = ({ children }) => {
     document.documentElement.style.setProperty(
       "--button-hover-usenavbar",
       colors.background_color
+    );
+    // Add navbar font color property
+    document.documentElement.style.setProperty(
+      "--navbar-font-color",
+      colors.navbar_font_color
     );
   }, [colors]);
 

@@ -22,7 +22,7 @@ const Navbar = () => {
                 aria-controls="navbarSupportedContent"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-                style={{ backgroundColor: colors.button_color, color: colors.button_font_color }}
+                style={{ backgroundColor: colors.button_color, color: colors.navbar_font_color }}
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -34,7 +34,7 @@ const Navbar = () => {
                         className="nav-link"
                         exact={item === "Home"}
                         to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                        style={{ color: colors.button_font_color }}
+                        style={{ color: colors.navbar_font_color }}
                         activeStyle={{ fontWeight: "bold", textDecoration: "underline" }}
                       >
                         {item}
